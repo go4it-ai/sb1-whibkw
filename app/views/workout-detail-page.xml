@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
 xmlns:Gif="nativescript-gif"
+xmlns:WebView="nativescript-webview-interface"
 navigatingTo="onNavigatingTo"
 >
     <ActionBar title="{{ name }}" />
@@ -18,12 +19,12 @@ navigatingTo="onNavigatingTo"
                                    stretch="aspectFill"
                                    visibility="{{ animatedImageUrl ? 'collapsed' : 'visible' }}" />
                             
-                            <!-- Animated GIF -->
+                            <!-- Animated GIF 
                             <Image src="{{ animatedImageUrl}}" 
                                    height="160" 
                                    class="rounded-lg" 
                                    stretch="aspectFill"
-                                   visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />
+                                   visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />-->
                         </GridLayout>
                        
                         <StackLayout row="1" class="p-2">
@@ -51,18 +52,20 @@ navigatingTo="onNavigatingTo"
                                        visibility="{{ animatedImageUrl ? 'collapsed' : 'visible' }}" />
                                 
                                 <!-- Animated GIF -->
-                                <Image src="{{ animatedImageUrl}}" 
+                                <WebView src="{{ animatedImageUrl || 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif'}}" 
                                        height="280" 
                                        class="rounded-lg" 
                                        stretch="aspectFit"
                                        visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />
                             </GridLayout>
                             <StackLayout row="1" class="p-2">
-                                <!--<Gif src="{{ animatedImageUrl}}||'https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif'" />-->
+                                <!--<Gif src="~/assets/images/exercises/Dumbbell-Calf-Raise.gif" height="280" width="auto"/>-->
+                                <!--<WebView src="~/assets/images/exercises/Dumbbell-Calf-Raise.gif" height="280" width="auto" />-->
                                 <Label text="{{ name }}" class="text-lg font-bold" />
                                 <Label text="{{ muscleGroup }}" class="text-sm text-indigo-600" />
                                 <Label text="{{ sets + ' séries de ' + reps + ' repetições ' + weight}}" class="text-gray-600" />
                                 <Label text="{{ description }}" class="text-gray-500" textWrap="true" />
+                                
                             </StackLayout>
                         </GridLayout>
                     </ListView.itemTemplate>
