@@ -24,7 +24,7 @@ export const bonusExercisePool: { [key: string]: Exercise[] } = {
             reps: "12-15",
             weight: "8kg",
             imageUrl: "~/assets/images/exercises/Concentration-Curl.png",
-            animatedImageUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif",
+            animatedImageUrl: "~/assets/images/exercises/Concentration-Curl.gif",
             description: "Sente-se, apoie o cotovelo na parte interna da coxa e concentre o movimento no bíceps.",
             muscleGroup: "biceps"
         },
@@ -34,6 +34,7 @@ export const bonusExercisePool: { [key: string]: Exercise[] } = {
             reps: "12-15",
             weight: "8kg",
             imageUrl: "~/assets/images/exercises/Hammer-Curl.png",
+            animatedImageUrl: "~/assets/images/exercises/Hammer-Curl.gif",
             description: "Segure os halteres com as palmas viradas uma para a outra e mantenha os cotovelos estáveis.",
             muscleGroup: "biceps"
         }
@@ -45,6 +46,7 @@ export const bonusExercisePool: { [key: string]: Exercise[] } = {
             reps: "12-15",
             weight: "8kg",
             imageUrl: "~/assets/images/exercises/Dumbbell-Skull-Crusher.png",
+            animatedImageUrl: "~/assets/images/exercises/Dumbbell-Skull-Crusher.gif",
             description: "Deite-se no banco, segure os halteres acima da testa e flexione os cotovelos.",
             muscleGroup: "triceps"
         },
@@ -54,6 +56,7 @@ export const bonusExercisePool: { [key: string]: Exercise[] } = {
             reps: "12-15",
             weight: "Peso Corporal",
             imageUrl: "~/assets/images/exercises/Triceps-Dips-on-Floor.png",
+            animatedImageUrl: "~/assets/images/exercises/Triceps-Dips-on-Floor.gif",
             description: "Apoie as mãos em um banco e desça controladamente, mantendo os cotovelos para trás.",
             muscleGroup: "triceps"
         }
@@ -65,6 +68,7 @@ export const bonusExercisePool: { [key: string]: Exercise[] } = {
             reps: "12-15",
             weight: "4-6kg",
             imageUrl: "~/assets/images/exercises/Alternating-Dumbbell-Front-Raise.png",
+            animatedImageUrl: "~/assets/images/exercises/Alternating-Dumbbell-Front-Raise.gif",
             description: "Levante os halteres até a altura dos ombros, mantendo um leve arco nos cotovelos.",
             muscleGroup: "shoulders"
         },
@@ -74,6 +78,7 @@ export const bonusExercisePool: { [key: string]: Exercise[] } = {
             reps: "12-15",
             weight: "4-6kg",
             imageUrl: "~/assets/images/exercises/Bent-Over-Lateral-Raise.png",
+            animatedImageUrl: "~/assets/images/exercises/Bent-Over-Lateral-Raise.gif",
             description: "Curvado à frente, levante os halteres lateralmente focando a parte posterior dos ombros.",
             muscleGroup: "shoulders"
         }

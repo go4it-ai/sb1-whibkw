@@ -40,22 +40,25 @@ navigatingTo="onNavigatingTo"
             <StackLayout visibility="{{ hasBonusExercises ? 'visible' : 'collapsed' }}" class="mt-6">
                 <Label text="Bonus Exercises 🎯" class="text-xl font-bold mb-2 text-indigo-600" />
                 <Label text="Try these alternative exercises to spice up your workout!" class="text-gray-500" textWrap="true"  />
-                <ListView items="{{ bonusExercises }}" height="{{ bonusExercises.length * 420 +20}}" separatorColor="transparent">
+                <ListView items="{{ bonusExercises }}" height="{{ bonusExercises.length * 460 +20}}" separatorColor="transparent">
                     <ListView.itemTemplate>
                         <GridLayout rows="auto, auto" columns="*" class="exercise-card m-2 p-4 bg-white rounded-lg">
                             <GridLayout row="0" rows="auto" columns="*" class="relative">
                                 <!-- Static Image -->
                                 <Image src="{{ imageUrl }}" 
-                                       height="280" 
+                                       height="300" 
                                        class="rounded-lg" 
-                                       stretch="aspectFill"
+                                       stretch="aspectFit"
                                        visibility="{{ animatedImageUrl ? 'collapsed' : 'visible' }}" />
                                 
                                 <!-- Animated GIF -->
-                                <WebView src="{{ animatedImageUrl || 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif'}}" 
-                                       height="280" 
+                                <WebView src="{{ animatedImageUrl}}" 
+                                       height="300" 
+                                       width="auto"
                                        class="rounded-lg" 
                                        stretch="aspectFit"
+                                       horizontalAlignment="center" 
+                                       verticalAlignment="middle"
                                        visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />
                             </GridLayout>
                             <StackLayout row="1" class="p-2">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <ActionBar title="Workout Plan" />
+    <ActionBar title="Workout AI Trainer - Go4ITs" />
     <ListView items="{{ workoutDays }}" class="list-group">
         <ListView.itemTemplate>
             <StackLayout class="list-group-item p-4" tap="onDaySelect">
