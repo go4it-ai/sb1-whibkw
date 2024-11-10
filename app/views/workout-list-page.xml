@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Workout Plan" />
+    <ListView items="{{ workoutDays }}" class="list-group">
+        <ListView.itemTemplate>
+            <StackLayout class="list-group-item p-4" tap="onDaySelect">
+                <Label text="{{ name }}" class="text-lg font-bold" />
+                <Label text="{{ exercises.length + ' exercises' }}" class="text-gray-500" />
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</Page>

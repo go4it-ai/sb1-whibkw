@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.exercise-card {
+    elevation: 2;
+    border-width: 1;
+    border-color: #e5e7eb;
+}
+
+.list-group-item {
+    border-bottom-width: 1;
+    border-bottom-color: #e5e7eb;
+}
+
+ActionBar {
+    background-color: #baba3f;
+    color: white;
+}

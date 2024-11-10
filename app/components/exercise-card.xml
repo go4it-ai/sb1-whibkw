@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout class="exercise-card m-2 p-4 bg-white rounded-lg">
+    <GridLayout rows="auto" columns="*" class="relative">
+        <!-- Static Image (shown by default) -->
+        <Image src="{{ imageUrl }}" 
+               height="160" 
+               class="rounded-lg" 
+               stretch="aspectFill"
+               visibility="{{ animatedImageUrl ? 'collapsed' : 'visible' }}" />
+        
+        <!-- Animated GIF (shown if available) -->
+        <Image src="{{ animatedImageUrl }}" 
+               height="160" 
+               class="rounded-lg" 
+               stretch="aspectFill"
+               visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />
+    </GridLayout>
+    <Label text="{{ name }}" class="text-lg font-bold mt-2" />
+    <Label text="{{ muscleGroup }}" class="text-sm font-bold text-orange-600 mb-1" />
+    <Label text="{{ sets }} séries de {{ reps }} repetições" class="text-gray-600" />
+    <Label text="{{ weight }}" class="text-gray-600" />
+    <Label text="{{ description }}" class="text-gray-500 mt-1" textWrap="true" />
+</StackLayout>

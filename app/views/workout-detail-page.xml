@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+xmlns:Gif="nativescript-gif"
+navigatingTo="onNavigatingTo"
+>
+    <ActionBar title="{{ name }}" />
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Regular Exercises" class="text-xl font-bold mb-2" />
+            <ListView items="{{ regularExercises }}" height="{{ regularExercises.length * 320  }}" separatorColor="transparent">
+                <ListView.itemTemplate>
+                    <GridLayout rows="auto, auto" columns="*" class="exercise-card m-2 p-4 bg-white rounded-lg">
+                        <GridLayout row="0" rows="auto" columns="*" class="relative">
+                            <!-- Static Image -->
+                            <Image src="{{ imageUrl }}" 
+                                   height="160" 
+                                   class="rounded-lg" 
+                                   stretch="aspectFill"
+                                   visibility="{{ animatedImageUrl ? 'collapsed' : 'visible' }}" />
+                            
+                            <!-- Animated GIF -->
+                            <Image src="{{ animatedImageUrl}}" 
+                                   height="160" 
+                                   class="rounded-lg" 
+                                   stretch="aspectFill"
+                                   visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />
+                        </GridLayout>
+                       
+                        <StackLayout row="1" class="p-2">
+                            <Label text="{{ name }}" class="text-lg font-bold" />
+                            <Label text="{{ muscleGroup }}" class="text-sm font-bold text-blue-600" />
+                            <Label text="{{ sets + ' séries de ' + reps + ' repetições '  + weight}}" class="text-gray-600" />
+                            <Label text="{{ description }}" class="text-gray-500" textWrap="true" />
+                        </StackLayout>
+                    </GridLayout>
+                </ListView.itemTemplate>
+            </ListView>
+            
+            <StackLayout visibility="{{ hasBonusExercises ? 'visible' : 'collapsed' }}" class="mt-6">
+                <Label text="Bonus Exercises 🎯" class="text-xl font-bold mb-2 text-indigo-600" />
+                <Label text="Try these alternative exercises to spice up your workout!" class="text-gray-500" textWrap="true"  />
+                <ListView items="{{ bonusExercises }}" height="{{ bonusExercises.length * 420 +20}}" separatorColor="transparent">
+                    <ListView.itemTemplate>
+                        <GridLayout rows="auto, auto" columns="*" class="exercise-card m-2 p-4 bg-white rounded-lg">
+                            <GridLayout row="0" rows="auto" columns="*" class="relative">
+                                <!-- Static Image -->
+                                <Image src="{{ imageUrl }}" 
+                                       height="280" 
+                                       class="rounded-lg" 
+                                       stretch="aspectFill"
+                                       visibility="{{ animatedImageUrl ? 'collapsed' : 'visible' }}" />
+                                
+                                <!-- Animated GIF -->
+                                <Image src="{{ animatedImageUrl}}" 
+                                       height="280" 
+                                       class="rounded-lg" 
+                                       stretch="aspectFit"
+                                       visibility="{{ animatedImageUrl ? 'visible' : 'collapsed' }}" />
+                            </GridLayout>
+                            <StackLayout row="1" class="p-2">
+                                <!--<Gif src="{{ animatedImageUrl}}||'https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif'" />-->
+                                <Label text="{{ name }}" class="text-lg font-bold" />
+                                <Label text="{{ muscleGroup }}" class="text-sm text-indigo-600" />
+                                <Label text="{{ sets + ' séries de ' + reps + ' repetições ' + weight}}" class="text-gray-600" />
+                                <Label text="{{ description }}" class="text-gray-500" textWrap="true" />
+                            </StackLayout>
+                        </GridLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>
